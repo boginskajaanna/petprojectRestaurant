@@ -1,0 +1,118 @@
+.reservation {
+  padding: 140px 220px;
+  background-image: url(../../images/reservation-bcg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (max-width: 1280px) {
+    padding: 140px 110px;
+  }
+  @media (max-width: 880px) {
+    padding: 100px 70px;
+  }
+  @media (max-width: 600px) {
+    padding: 60px 20px;
+  }
+  @media (max-width: 480px) {
+    padding: 30px 10px;
+  }
+  @media (max-width: 400px) {
+    padding: 30px 0;
+  }
+
+  &__inner {
+    text-align: center;
+    padding: 140px 140px 155px;
+    background-color: rgba($color-primery-dark, 0.9);
+    @media (max-width: 800px) {
+    padding: 60px 60px;
+  }
+  @media (max-width: 480px) {
+    padding: 30px 30px;
+  }
+  @media (max-width: 400px) {
+    padding: 30px 20px;
+  }
+  }
+
+  &__title {
+    @extend %uppercase-title-font;
+    color: $color-primery-light;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form-title {
+    font-family: "Cormorant Infant", serif;
+    font-style: normal;
+    color: $color-primery-light;
+    font-size: 40px;
+    line-height: 56px;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0.2px;
+    margin-bottom: 38px;
+    @media (max-width: 980px) {
+      font-size: 34px;
+      line-height: 44px;
+    }
+    @media (max-width: 600px) {
+    margin-bottom: 20px;
+  }
+  }
+
+  &__form-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    gap: 26px;
+  }
+
+  &__form-bottom {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 23px;
+    margin-bottom: 30px;
+  }
+
+  &__form-input {
+    position: relative;
+    color: $color-primery-light;
+    background-color: transparent;
+    border: 1px solid $color-decor-dark;
+    padding: 18px 23px;
+    color: $color-primery-light;
+    &::placeholder {
+      position: absolute;
+      color: $color-menu-decor;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 33px;
+    }
+    @media (max-width: 1060px) {
+    width: 100%;
+  }
+  }
+
+  &__form-input-name,
+  &__form-input-email {
+    flex-grow: 1;
+  }
+
+  &__form-input-persons,
+  &__form-input-time,
+  &__form-input-date {
+    // width: 33.3%;
+    flex-grow: 1;
+  }
+
+  &__form-btn {
+    display: inline-block;
+    padding: 14px 54px;
+  }
+}

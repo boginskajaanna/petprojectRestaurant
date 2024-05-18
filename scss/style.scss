@@ -1,0 +1,30 @@
+@import "./reset";
+@import "./vars";
+@import "./base";
+
+
+// layouts
+@import "./layouts/blog-section";
+@import "./layouts/contacts-section";
+@import "./layouts/decor";
+@import "./layouts/feedback-section";
+@import "./layouts/footer";
+@import "./layouts/header";
+@import "./layouts/menu-section";
+@import "./layouts/offers-section";
+@import "./layouts/popular-section";
+@import "./layouts/reservation-section";
+@import "./layouts/services-section";
+@import "./layouts/story-section";
+@import "./layouts/welcome-section";
+
+// components
+@import "./components/logo";
+@import "./components/menu-social";
+@import "./components/reservation-button";
+
+// utils
+@import "./utils/swiper";
+
+
+

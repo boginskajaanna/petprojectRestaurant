@@ -1,0 +1,137 @@
+.welcome {
+  background-color: $color-primery-dark;
+  color: $color-primery-light;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // gap: 50px;
+    margin-top: 40px;
+    @media (max-width: 780px) {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 0;
+    }
+  }
+
+  &__info {
+    // max-width: 620px;
+    // padding: 120px 0;
+    width: 45%;
+    margin-right: 30px;
+    @media (max-width: 920px) {
+      width: 55%;
+    }
+     @media (max-width: 780px) {
+      width: 100%;
+      text-align: center;
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    font-family: "Cormorant Infant", serif;
+    font-size: 100px;
+    line-height: 110px;
+    letter-spacing: 0.2px;
+    margin-bottom: 26px;
+    @media (max-width: 1225px) {
+      font-size: 90px;
+      line-height: 100px;
+    }
+    @media (max-width: 1150px) {
+      font-size: 70px;
+      line-height: 80px;
+    }
+    @media (max-width: 1000px) {
+      font-size: 60px;
+      line-height: 66px;
+    }
+    @media (max-width: 920px) {
+      font-size: 50px;
+      line-height: 56px;
+    }
+    @media (max-width: 780px) {
+      font-size: 60px;
+      line-height: 66px;
+      margin-bottom: 40px;
+    }
+    @media (max-width: 360px) {
+      font-size: 50px;
+      line-height: 56px;
+    }
+  }
+
+  &__descr {
+    // max-width: 620px;
+    margin-bottom: 35px;
+    @media (max-width: 1000px) {
+      font-size: 18px;
+      line-height: 28px;
+    }
+    @media (max-width: 400px) {
+font-size: 14px;
+line-height: 20px;
+    }
+    @media (max-width: 360px) {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+
+  &__view-menu-button {
+    padding: 20px 57px;
+    display: inline-block;
+    margin-bottom: 30px;
+    @media (max-width: 780px) {
+      margin-bottom: 60px;
+    }
+    @media (max-width: 640px) {
+      margin-bottom: 36px;
+    }
+    @media (max-width: 400px) {
+padding: 16px 46px;    }
+  }
+
+  &__img {
+    position: relative;
+    // width: 705px;
+    max-width: 100%;
+    // flex-grow: 1;
+     vertical-align: bottom;
+    // height: 100%;
+    &::before {
+      content: "";
+      position: absolute;
+      background-color: rgba($color-primery-light, 0.1);
+      height: 30px;
+      left: 30px;
+      right: 30px;
+      top: -30px;
+      @media (max-width: 640px) {
+      display: none;
+    }
+    }
+    @media (max-width: 780px) {
+      width: 100%;
+    }
+  }
+
+  &__image {
+   
+    padding-left: 30px;
+    padding-top: 30px;
+    padding-right: 30px;
+    // vertical-align: bottom;
+    max-width: 100%;
+    // min-height: 740px;
+    // height: 100%;
+    border-left: 30px solid rgba($color-primery-light, 0.1);
+    border-right: 30px solid rgba($color-primery-light, 0.1);
+    @media (max-width: 640px) {
+      border: none;
+      padding: 0;
+    }
+  }
+}

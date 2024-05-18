@@ -1,0 +1,27 @@
+$color-primery-dark: #292e36;
+$color-primery-light: #ffffff;
+$color-font-dark: #555555;
+$color-decor-light: #e1b168;
+$color-decor-dark: #5c6168;
+$color-bcg-light: #fff8f5;
+$color-menu-decor: #aaaaaa;
+$color-feedback-bcg: #343942;
+
+%uppercase-title-font {
+  display: inline-block;
+  text-transform: uppercase;
+  font-family: "Josefin Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 3px;
+  padding-top: 3px;
+  margin-bottom: 12px;
+  border-top: 1px solid $color-decor-light;
+  border-bottom: 1px solid $color-decor-light;
+}
+
+// $bp-mobile: 480px;
+// $bp-tablet: 768px;
+// $bp-desktop: 1280px;

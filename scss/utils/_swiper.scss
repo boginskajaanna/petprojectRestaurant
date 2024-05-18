@@ -1,0 +1,14 @@
+.swiper .swiper-pagination {
+  position: relative;
+  margin-top: 70px;
+}
+
+.swiper-pagination-bullet {
+  background-color: $color-primery-light;
+  width: 20px;
+  height: 20px;
+  @media (max-width: 768px) {
+      height: 14px;
+      width: 14px;
+    }
+}

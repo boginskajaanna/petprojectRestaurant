@@ -1,0 +1,265 @@
+.offers {
+  padding: 140px 0 60px;
+  background-color: $color-primery-light;
+  @media (max-width: 600px) {
+      padding-top: 60px;
+    }
+  &__top {
+    text-align: center;
+    max-width: 813px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    @extend %uppercase-title-font;
+    color: $color-primery-dark;
+  }
+
+  &__top-title {
+    font-size: 40px;
+    line-height: 56px;
+    margin-bottom: 8px;
+     @media (max-width: 980px) {
+      font-size: 34px;
+      line-height: 44px;
+    }
+  }
+
+  &__top-text {
+    margin-bottom: 40px;
+  }
+
+  &__banners {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    @media (max-width: 910px) {
+      flex-direction: column;
+      width: 70%;
+      margin: 0 auto;
+    }
+    @media (max-width: 770px) {
+      width: 100%;
+    }
+  }
+
+  &__banner {
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    // align-items: center;
+    padding: 45px 40px;
+    @media (max-width: 1350px) {
+      padding: 35px 30px;
+    }
+    @media (max-width: 1145px) {
+      padding: 0 25px 20px;
+    }
+    @media (max-width: 910px) {
+      padding: 20px 25px;
+    }
+    @media (max-width: 480px) {
+      padding-right: 10px;
+    }
+     @media (max-width: 400px) {
+      flex-direction: column;
+    }
+  }
+
+  &__banner-left {
+    background-color: #b0eef5;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 65px;
+      left: 30px;
+      width: 167px;
+      height: 104px;
+      background-image: url(../../images/price-tag-light.svg);
+      background-repeat: no-repeat;
+      @media (max-width: 1145px) {
+        top: 30px;
+        left: 20px;
+      }
+      @media (max-width: 480px) {
+        width: 130px;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__banner-right {
+    background-color: #d3dadb;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 65px;
+      left: 30px;
+      width: 167px;
+      height: 104px;
+      background-image: url(../../images/price-tag-dark.svg);
+      background-repeat: no-repeat;
+      @media (max-width: 1145px) {
+        top: 30px;
+        left: 20px;
+      }
+      @media (max-width: 480px) {
+        width: 130px;
+        background-size: contain;
+      }
+    }
+  }
+
+  &__banner-text {
+    width: 40%;
+    @media (max-width: 1350px) {
+      width: 45%;
+    }
+    @media (max-width: 400px) {
+width: 100%;    }
+  }
+
+  &__banner-price-tag {
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 16px;
+    position: relative;
+    top: 40px;
+    left: 34px;
+    @media (max-width: 1145px) {
+      left: 35px;
+      top: 45px;
+    }
+    @media (max-width: 480px) {
+      top: 25px;
+      font-size: 14px;
+    }
+  }
+
+  &__banner-price-tag-left {
+    color: $color-primery-dark;
+  }
+
+  &__banner-price-tag-right {
+    color: $color-primery-light;
+  }
+
+  &__banner-price {
+    font-family: "Cormorant Infant";
+    font-style: normal;
+    font-size: 60px;
+    line-height: 66px;
+    margin-bottom: 74px;
+    position: relative;
+    top: 32px;
+    left: 40px;
+    @media (max-width: 1145px) {
+      left: 55px;
+      top: 40px;
+    }
+    @media (max-width: 1060px) {
+      font-size: 50px;
+      line-height: 55px;
+    }
+    @media (max-width: 560px) {
+      font-size: 40px;
+      line-height: 44px;
+    }
+    @media (max-width: 480px) {
+        left: 50px;
+        top: 20px;
+        margin-bottom: 40px;
+      }
+  }
+
+  &__banner-price-left {
+    color: $color-primery-dark;
+  }
+
+  &__banner-price-right {
+    color: $color-primery-light;
+  }
+
+  &__banner-discount {
+    color: $color-primery-dark;
+    display: inline-block;
+    text-transform: uppercase;
+    font-family: "Josefin Sans";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 25px;
+    letter-spacing: 4px;
+    padding-top: 3px;
+    margin-bottom: 8px;
+    border-top: 1px solid $color-primery-dark;
+    border-bottom: 1px solid $color-primery-dark;
+    @media (max-width: 1145px) {
+      font-size: 13px;
+      line-height: 20px;
+    }
+    @media (max-width: 1060px) {
+      font-size: 10px;
+      line-height: 16px;
+    }
+    @media (max-width: 910px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    @media (max-width: 560px) {
+      font-size: 10px;
+      line-height: 16px;
+    }
+    @media (max-width: 480px) {
+      letter-spacing: 2px;
+    }
+  }
+
+  &__banner-dish-name {
+    font-size: 40px;
+    line-height: 56px;
+    margin-bottom: 5px;
+    @media (max-width: 1145px) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+    @media (max-width: 1060px) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+     @media (max-width: 480px) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+  }
+
+  &__banner-dish-descr {
+    @media (max-width: 1145px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    @media (max-width: 560px) {
+      font-size: 14px;
+      line-height: 18px;
+    }
+     @media (max-width: 480px) {
+        font-size: 12px;
+        line-height: 16px;
+      }
+  }
+
+  &__banner-dish-img {
+    width: 60%;
+    align-self: center;
+    @media (max-width: 1350px) {
+      width: 55%;
+    }
+    @media (max-width: 480px) {
+      width: 50%;
+    }
+    @media (max-width: 400px) {
+width: 100%;    }
+  }
+}

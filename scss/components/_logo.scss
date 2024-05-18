@@ -1,0 +1,9 @@
+.logo {
+  &__img {
+    max-width: 100%;
+  }
+   @media (max-width: 880px) {
+      order: -1;
+      margin-bottom: 30px;
+    }
+}

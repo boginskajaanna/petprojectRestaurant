@@ -1,0 +1,24 @@
+.footer {
+  padding: 50px 0;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $color-primery-light;
+    @media (max-width: 880px) {
+      flex-direction: column;
+    }
+  }
+
+  &__hashtag {
+    line-height: 33px;
+    transition: color 0.3s;
+    &:hover {
+      color: $color-decor-light;
+    }
+    @media (max-width: 880px) {
+      margin-bottom: 15px;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  // font-family: 'Cormorant Infant', serif;
+  font-family: "Josefin Sans", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  font-size: 20px;
+  color: $color-font-dark;
+  background-color: $color-primery-dark;
+  letter-spacing: 0.2px;
+  @media (max-width: 1000px) {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  @media (max-width: 640px) {
+    font-size: 16px;
+    line-height: 23px;
+  }
+  @media (max-width: 550px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  @media (max-width: 470px) {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  @media (max-width: 400px) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.button {
+  border: 2px solid $color-decor-light;
+  text-align: center;
+  font-size: 22px;
+  line-height: 33px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  color: $color-primery-light;
+  transition: all 0.3s;
+  &:hover {
+    background-color: $color-decor-light;
+    color: $color-primery-dark;
+  }
+  @media (max-width: 1080px) {
+    font-size: 16px;
+  }
+  @media (max-width: 850px) {
+    font-size: 18px;
+  }
+  @media (max-width: 500px) {
+    font-size: 14px;
+  }
+}
+
+.title {
+  font-family: "Cormorant Infant", serif;
+  font-style: normal;
+  color: $color-primery-dark;
+  letter-spacing: 0.2px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
