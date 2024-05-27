@@ -20,6 +20,7 @@
     // font-size: 22px;
     // line-height: 33px;
     transition: all 0.3s;
+    color: $color-primery-light;
     &:hover {
       background-color: $color-decor-light;
       color: $color-primery-dark;
@@ -34,9 +35,8 @@
       margin-right: 0;
       margin-bottom: 20px;
     }
-     @media (max-width: 500px) {
+    @media (max-width: 500px) {
       // font-size: 14px;
-      
     }
   }
 
@@ -83,7 +83,7 @@
     @media (max-width: 940px) {
       margin-right: 0;
     }
-   }
+  }
 
   &__menu-categories-link {
     transition: color 0.3s;

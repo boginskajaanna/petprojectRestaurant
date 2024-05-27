@@ -83,6 +83,8 @@ line-height: 20px;
   &__view-menu-button {
     padding: 20px 57px;
     display: inline-block;
+      color: $color-primery-light;
+
     margin-bottom: 30px;
     @media (max-width: 780px) {
       margin-bottom: 60px;

@@ -124,6 +124,7 @@
   }
 
   &__link {
+    color: $color-font-dark;
     padding: 20px 57px;
     @media (max-width: 880px) {
       padding: 16px 48px;
