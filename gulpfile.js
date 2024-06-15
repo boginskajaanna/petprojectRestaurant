@@ -33,7 +33,7 @@ function watching() {
       baseDir: "./", //автообновление страницы браузера если есть изменения в папке app
     },
   });
-  watch(["scss/style.scss"], styles); //отслеживаем изменения стилей, если есть запускаем автоматически styles
+  watch(["scss/**/*.scss"], styles); //отслеживаем изменения стилей, если есть запускаем автоматически styles
   watch(["js/main.js"], scripts); //отслеживаем изменения стилей, если есть запускаем автоматически scripts
   // watch(["app/components/*", 'app/pages/*'], pages); //отслеживаем изменения html компонентов, если есть запускаем автоматически pages
   watch(["*.html"]).on("change", browserSync.reload); //отслеживание изменения в html файлах

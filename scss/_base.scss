@@ -3,7 +3,6 @@ html {
 }
 
 
-
 body {
   // font-family: 'Cormorant Infant', serif;
   font-family: "Josefin Sans", sans-serif;
@@ -35,7 +34,6 @@ body {
     line-height: 16px;
   }
 }
-
 
 .container {
   max-width: 1440px;
@@ -85,3 +83,6 @@ body {
   overflow: hidden;
 }
 
+.hidden {
+  display: none;
+}

@@ -25,14 +25,14 @@
     padding: 140px 140px 155px;
     background-color: rgba($color-primery-dark, 0.9);
     @media (max-width: 800px) {
-    padding: 60px 60px;
-  }
-  @media (max-width: 480px) {
-    padding: 30px 30px;
-  }
-  @media (max-width: 400px) {
-    padding: 30px 20px;
-  }
+      padding: 60px 60px;
+    }
+    @media (max-width: 480px) {
+      padding: 30px 30px;
+    }
+    @media (max-width: 400px) {
+      padding: 30px 20px;
+    }
   }
 
   &__title {
@@ -60,8 +60,8 @@
       line-height: 44px;
     }
     @media (max-width: 600px) {
-    margin-bottom: 20px;
-  }
+      margin-bottom: 20px;
+    }
   }
 
   &__form-top {
@@ -93,10 +93,19 @@
       font-size: 18px;
       font-weight: 400;
       line-height: 33px;
+      @media (max-width: 640px) {
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      @media (max-width: 470px) {
+        font-size: 12px;
+        line-height: 16px;
+      }
     }
     @media (max-width: 1060px) {
-    width: 100%;
-  }
+      width: 100%;
+    }
   }
 
   &__form-input-name,
@@ -115,5 +124,29 @@
     color: $color-primery-light;
     display: inline-block;
     padding: 14px 54px;
+    margin-bottom: 10px;
   }
+}
+
+#reservationSuccessMessage {
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease .4s;
+  padding: 10px;
+  color: $color-primery-light;
+  @media (max-width: 800px) {
+    font-size: 12px;
+  }
+}
+
+#reservationSuccessMessage.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+//----------
+
+.flatpickr-calendar.open{
+  border-radius: inherit;
+  
 }

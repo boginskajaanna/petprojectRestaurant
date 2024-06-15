@@ -2,8 +2,8 @@
   padding: 60px 0 140px;
   background-color: $color-primery-light;
   @media (max-width: 480px) {
-      padding-bottom: 60px;
-    }
+    padding-bottom: 60px;
+  }
 
   &__top {
     text-align: center;
@@ -20,7 +20,7 @@
     font-size: 40px;
     line-height: 56px;
     margin-bottom: 8px;
-     @media (max-width: 980px) {
+    @media (max-width: 980px) {
       font-size: 34px;
       line-height: 44px;
     }
@@ -31,30 +31,23 @@
   }
 
   &__dish-list {
-    // display: flex;
-    // justify-content: space-between;
-    // gap: 30px;
-    // margin-bottom: 70px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: clamp(12px, 4vw, 30px);
     margin-bottom: 60px;
     @media (max-width: 910px) {
-      grid-template-columns: repeat(2, 1fr);
-      // grid-template-rows: (2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
-    @media (max-width: 400px) {
-      grid-template-columns: (1fr);
-      margin-bottom: 40px;
+    @media (max-width: 620px) {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 
   &__dish-img {
-    width: 318px;
-    max-width: 100%;
-    @media (max-width: 910px) {
-      width: 100%;
-    }
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    margin-bottom: 10px;
   }
 
   &__dish-info {
@@ -75,7 +68,6 @@
     @media (max-width: 400px) {
       padding-bottom: 10px;
       margin-bottom: 10px;
-
     }
   }
 
@@ -95,7 +87,6 @@
       font-size: 20px;
       line-height: 26px;
     }
-    
   }
 
   &__dish-price {
@@ -115,7 +106,6 @@
       font-size: 20px;
       line-height: 26px;
     }
-   
   }
 
   &__btn {

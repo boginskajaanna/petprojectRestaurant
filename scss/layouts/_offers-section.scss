@@ -113,6 +113,7 @@
   }
 
   &__banner-text {
+    overflow-x: hidden;
     width: 40%;
     @media (max-width: 1350px) {
       width: 45%;

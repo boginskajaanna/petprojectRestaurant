@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
     <link rel="stylesheet" href="./css/style.min.css" />
   </head>
 
@@ -47,31 +48,64 @@
               </li>
             </ul>
           </nav>
+
+          <button class="mobile-menu__btn">
+            <span class="mobile-menu__line"></span>
+            <span class="mobile-menu__line"></span>
+            <span class="mobile-menu__line"></span>
+            <span class="mobile-menu__line"></span>
+          </button>
+
+          <div class="mobile-menu mobile-menu--hidden">
+            <nav class="mobile-menu__categories">
+              <ul class="mobile-menu__categories-items">
+                <li class="mobile-menu__categories-item">
+                  <a class="mobile-menu__categories-link" href="#welcome">Home</a>
+                </li>
+                <li class="mobile-menu__categories-item">
+                  <a class="mobile-menu__categories-link" href="#services">About Us</a>
+                </li>
+                <li class="mobile-menu__categories-item">
+                  <a class="mobile-menu__categories-link" href="#menu">Our Menu</a>
+                </li>
+                <li class="mobile-menu__categories-item">
+                  <a class="mobile-menu__categories-link" href="#feedback">Feedback</a>
+                </li>
+                <li class="mobile-menu__categories-item">
+                  <a class="mobile-menu__categories-link" href="#blog">Blog</a>
+                </li>
+                <li class="mobile-menu__categories-item">
+                  <a class="mobile-menu__categories-link" href="#contacts">Contact Us</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+
           <div class="menu-social">
             <ul class="menu-social__items">
               <li class="menu-social__item">
-                <a class="menu-social__link" href="#">
+                <a class="menu-social__link" href="#" target="_blank">
                   <svg class="menu-social__icon" width="26" height="26">
                     <use href="./images/icons/sprite.svg#icon-instagram"></use>
                   </svg>
                 </a>
               </li>
               <li class="menu-social__item">
-                <a class="menu-social__link" href="#">
+                <a class="menu-social__link" href="#" target="_blank">
                   <svg class="menu-social__icon" width="26" height="26">
                     <use href="./images/icons/sprite.svg#icon-facebook"></use>
                   </svg>
                 </a>
               </li>
               <li class="menu-social__item">
-                <a class="menu-social__link" href="#">
+                <a class="menu-social__link" href="#" target="_blank">
                   <svg class="menu-social__icon" width="26" height="26">
                     <use href="./images/icons/sprite.svg#icon-twitter"></use>
                   </svg>
                 </a>
               </li>
               <li class="menu-social__item">
-                <a class="menu-social__link" href="#">
+                <a class="menu-social__link" href="#" target="_blank">
                   <svg class="menu-social__icon" width="26" height="26">
                     <use href="./images/icons/sprite.svg#icon-pinterest"></use>
                   </svg>
@@ -185,9 +219,9 @@
                   alt="special dishes"
                 />
               </div>
-              <div class="menu__special-button-wrap">
+              <!-- <div class="menu__special-button-wrap">
                 <a class="menu__special-btn button" href="#">See all dishes</a>
-              </div>
+              </div> -->
             </article>
             <ul class="menu__list">
               <li class="menu__list-category">
@@ -512,9 +546,120 @@
               </div>
               <p class="popular__dish-descr">Burgers may be made from ingredients like beans.</p>
             </li>
+
+            <li class="popular__dish-item hidden">
+              <img
+                class="popular__dish-img"
+                src="./images/content/popular-dishes/pasta.jpg"
+                alt="italian pasta"
+              />
+              <div class="popular__dish-info">
+                <h5 class="popular__dish-name title">Italian Pasta</h5>
+                <p class="popular__dish-price">$12</p>
+              </div>
+              <p class="popular__dish-descr">Traditional pasta with a rich and savory tomato sauce.</p>
+            </li>
+
+            <li class="popular__dish-item hidden">
+              <img
+                class="popular__dish-img"
+                src="./images/content/popular-dishes/paella.jpg"
+                alt="spanish paella"
+              />
+              <div class="popular__dish-info">
+                <h5 class="popular__dish-name title">Spanish Paella</h5>
+                <p class="popular__dish-price">$18</p>
+              </div>
+              <p class="popular__dish-descr">A classic Spanish dish made with rice, saffron, and seafood.</p>
+            </li>
+
+            <li class="popular__dish-item hidden">
+              <img
+                class="popular__dish-img"
+                src="./images/content/popular-dishes/ratatouille.jpg"
+                alt="ratatouille"
+              />
+              <div class="popular__dish-info">
+                <h5 class="popular__dish-name title">Ratatouille</h5>
+                <p class="popular__dish-price">$14</p>
+              </div>
+              <p class="popular__dish-descr">
+                A French Provençal stewed vegetable dish, delicious and healthy.
+              </p>
+            </li>
+
+            <li class="popular__dish-item hidden">
+              <img
+                class="popular__dish-img"
+                src="./images/content/popular-dishes/schnitzel.jpg"
+                alt="schnitzel"
+              />
+              <div class="popular__dish-info">
+                <h5 class="popular__dish-name title">Schnitzel</h5>
+                <p class="popular__dish-price">$16</p>
+              </div>
+              <p class="popular__dish-descr">
+                A breaded and fried cutlet, commonly served in Austria and Germany.
+              </p>
+            </li>
+
+            <li class="popular__dish-item hidden">
+              <img class="popular__dish-img" src="./images/content/popular-dishes/crepes.jpg" alt="crepes" />
+              <div class="popular__dish-info">
+                <h5 class="popular__dish-name title">Crepes</h5>
+                <p class="popular__dish-price">$8</p>
+              </div>
+              <p class="popular__dish-descr">Thin French pancakes served with various fillings.</p>
+            </li>
+
+            <li class="popular__dish-item hidden">
+              <img
+                class="popular__dish-img"
+                src="./images/content/popular-dishes/moussaka.jpg"
+                alt="moussaka"
+              />
+              <div class="popular__dish-info">
+                <h5 class="popular__dish-name title">Moussaka</h5>
+                <p class="popular__dish-price">$13</p>
+              </div>
+              <p class="popular__dish-descr">
+                A Greek casserole made with layers of eggplant, minced meat, and béchamel sauce.
+              </p>
+            </li>
+
+            <li class="popular__dish-item hidden">
+              <img
+                class="popular__dish-img"
+                src="./images/content/popular-dishes/croissant.jpg"
+                alt="croissant"
+              />
+              <div class="popular__dish-info">
+                <h5 class="popular__dish-name title">Croissant</h5>
+                <p class="popular__dish-price">$4</p>
+              </div>
+              <p class="popular__dish-descr">
+                A buttery, flaky, and crescent-shaped French pastry, perfect for breakfast or a snack.
+              </p>
+            </li>
+
+            <li class="popular__dish-item hidden">
+              <img
+                class="popular__dish-img"
+                src="./images/content/popular-dishes/tiramisu.jpg"
+                alt="tiramisu"
+              />
+              <div class="popular__dish-info">
+                <h5 class="popular__dish-name title">Tiramisu</h5>
+                <p class="popular__dish-price">$9</p>
+              </div>
+              <p class="popular__dish-descr">
+                An Italian dessert made of layers of coffee-soaked ladyfingers and mascarpone cheese.
+              </p>
+            </li>
           </ul>
+
           <div class="popular__btn">
-            <a class="popular__link button" href="#">See all dishes</a>
+            <button class="popular__link button" id="seeAllDishes">See all dishes</button>
           </div>
         </div>
       </section>
@@ -573,12 +718,12 @@
             <li class="blog__article">
               <div class="blog__article-top">
                 <img class="blog__article-img" src="./images/blog/blog-bcg-1.jpg" alt="bruschetta" />
-                <a class="blog__article-btn" href="#">View More</a>
+                <a class="blog__article-btn" href="#" target="blank">View More</a>
               </div>
               <div class="blog__article-info">
                 <span class="blog__article-theme">Delicious</span>
                 <span class="blog__article-date">March 19, 2022</span>
-                <a class="blog__article-link" href="#">
+                <a class="blog__article-link" href="#" target="_blank">
                   <h5 class="blog__article-title title">
                     The Legend of US Cuisine: The Story of Hungry People
                   </h5>
@@ -592,12 +737,12 @@
             <li class="blog__article">
               <div class="blog__article-top">
                 <img class="blog__article-img" src="./images/blog/blog-bcg-2.jpg" alt="mediterranean dish" />
-                <a class="blog__article-btn" href="#">View More</a>
+                <a class="blog__article-btn" href="#" target="_blank">View More</a>
               </div>
               <div class="blog__article-info">
                 <span class="blog__article-theme">Cooking</span>
                 <span class="blog__article-date">March 19, 2022</span>
-                <a class="blog__article-link" href="#">
+                <a class="blog__article-link" href="#" target="_blank">
                   <h5 class="blog__article-title title">
                     The Most Popular Delicious Food of Mediterranean Cuisine
                   </h5>
@@ -617,7 +762,7 @@
           <div class="reservation__inner">
             <h3 class="reservation__title">reservation</h3>
             <h4 class="reservation__form-title">Book Your Table</h4>
-            <form class="reservation__form">
+            <form class="reservation__form" id="reservationForm">
               <div class="reservation__form-top">
                 <label class="reservation__form-label visually-hidden" for="guest-name">Name</label>
                 <input
@@ -654,7 +799,6 @@
                   class="reservation__form-input reservation__form-input-time"
                   type="time"
                   id="timeImterval"
-                  onchange="validateTimeInterval()"
                   required
                 />
                 <label class="reservation__form-label visually-hidden" for="guest-date">Date</label>
@@ -669,6 +813,10 @@
               <div class="reservation__form-submit">
                 <button class="reservation__form-btn button" type="submit">Book a table</button>
               </div>
+              <div id="reservationSuccessMessage">
+                Thank you! Your reservation request has been received.<br />
+                We will contact you for confirmation ASAP.
+              </div>
             </form>
           </div>
         </div>
@@ -679,36 +827,34 @@
       <div class="container">
         <div class="footer__inner">
           <a class="footer__hashtag" href="#">#TheTastEat</a>
-          <a
-            class="logo"
-            href="https://boginskajaanna.github.io/petprojectRestaurant/">
+          <a class="logo" href="https://boginskajaanna.github.io/petprojectRestaurant/">
             <img class="logo__img" src="./images/logo.png" alt="restaurant logo"
           /></a>
           <div class="menu-social">
             <ul class="menu-social__items">
               <li class="menu-social__item">
-                <a class="menu-social__link" href="#">
+                <a class="menu-social__link" href="#" target="_blank">
                   <svg class="menu-social__icon" width="26" height="26">
                     <use href="./images/icons/sprite.svg#icon-instagram"></use>
                   </svg>
                 </a>
               </li>
               <li class="menu-social__item">
-                <a class="menu-social__link" href="#">
+                <a class="menu-social__link" href="#" target="_blank">
                   <svg class="menu-social__icon" width="26" height="26">
                     <use href="./images/icons/sprite.svg#icon-facebook"></use>
                   </svg>
                 </a>
               </li>
               <li class="menu-social__item">
-                <a class="menu-social__link" href="#">
+                <a class="menu-social__link" href="#" target="_blank">
                   <svg class="menu-social__icon" width="26" height="26">
                     <use href="./images/icons/sprite.svg#icon-twitter"></use>
                   </svg>
                 </a>
               </li>
               <li class="menu-social__item">
-                <a class="menu-social__link" href="#">
+                <a class="menu-social__link" href="#" target="_blank">
                   <svg class="menu-social__icon" width="26" height="26">
                     <use href="./images/icons/sprite.svg#icon-pinterest"></use>
                   </svg>
@@ -723,6 +869,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script src="./js/main.min.js"></script>
   </body>
 </html>
