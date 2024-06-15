@@ -22,13 +22,13 @@
 
   &__inner {
     text-align: center;
-    padding: 140px 140px 155px;
+    padding: 140px 140px 20px;
     background-color: rgba($color-primery-dark, 0.9);
     @media (max-width: 800px) {
-      padding: 60px 60px;
+      padding: 60px 60px 20px;
     }
     @media (max-width: 480px) {
-      padding: 30px 30px;
+      padding: 30px 30px 20px;
     }
     @media (max-width: 400px) {
       padding: 30px 20px;
@@ -85,8 +85,11 @@
     color: $color-primery-light;
     background-color: transparent;
     border: 1px solid $color-decor-dark;
+    border-radius: 5px;
     padding: 18px 23px;
+    height: 55px;
     color: $color-primery-light;
+    width: 100%;
     &::placeholder {
       position: absolute;
       color: $color-menu-decor;
@@ -103,9 +106,7 @@
         line-height: 16px;
       }
     }
-    @media (max-width: 1060px) {
-      width: 100%;
-    }
+
   }
 
   &__form-input-name,
@@ -131,7 +132,7 @@
 #reservationSuccessMessage {
   opacity: 0;
   visibility: hidden;
-  transition: all ease .4s;
+  transition: all ease 0.4s;
   padding: 10px;
   color: $color-primery-light;
   @media (max-width: 800px) {
@@ -146,7 +147,54 @@
 
 //----------
 
-.flatpickr-calendar.open{
+.flatpickr-calendar.open {
   border-radius: inherit;
-  
+}
+
+.flatpickr-input {
+  height: 55px;
+  width: 100%;
+}
+
+.input-container {
+  position: relative;
+  width: 100%;
+}
+
+.input-container .flatpickr-placeholder {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 23px;
+  pointer-events: none;
+  // transition: opacity 0.2s ease-out;
+  color: $color-menu-decor;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 33px;
+  @media (max-width: 640px) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media (max-width: 470px) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+// .input-container input:focus + .flatpickr-placeholder {
+//   opacity: 0;
+// }
+
+// .input-container input:active + .flatpickr-placeholder {
+//   opacity: 0;
+// }
+
+.flatpickr-placeholder {
+  opacity: 1;
+}
+
+.placeholder-hide {
+  opacity: 0;
 }

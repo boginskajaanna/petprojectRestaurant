@@ -6,9 +6,6 @@ mobileMenuBtn.addEventListener("click", function () {
   mobileMenu.classList.toggle("mobile-menu--hidden");
 });
 
-
-
-
 // Функция для обновления видимых элементов в зависимости от текущего размера экрана
 function updateVisibleItems() {
   const dishList = document.querySelector(".popular__dish-list");
@@ -96,8 +93,40 @@ const swiper = new Swiper(".swiper", {
 });
 
 //ПЛЕЙСХОЛДЕРЫ НА ИНПУТЫ ДАТА И ВРЕМЯ
-document.getElementById("timeImterval").setAttribute("placeholder", "Select time");
-document.getElementById("guest-date").setAttribute("placeholder", "Select date");
+// document.getElementById("timeImterval").setAttribute("placeholder", "Select time");
+// document.getElementById("guest-date").setAttribute("placeholder", "Select date");
+
+document.addEventListener("DOMContentLoaded", function () {
+  const timeInput = document.getElementById("timeImterval");
+  const timePlaceholder = document.querySelector("#timeImterval + .flatpickr-placeholder");
+
+  const dateInput = document.getElementById("guest-date");
+  const datePlaceholder = document.querySelector("#guest-date + .flatpickr-placeholder");
+
+  timeInput.addEventListener("focus", function () {
+    timePlaceholder.classList.add("placeholder-hide");
+  });
+
+  timeInput.addEventListener("change", function () {
+    if (!this.value) {
+      timePlaceholder.classList.remove("placeholder-hide");
+    } else {
+      timePlaceholder.classList.add("placeholder-hide");
+    }
+  });
+
+  dateInput.addEventListener("focus", function () {
+    datePlaceholder.classList.add("placeholder-hide");
+  });
+
+  dateInput.addEventListener("change", function () {
+    if (!this.value) {
+      datePlaceholder.classList.remove("placeholder-hide");
+    } else {
+      datePlaceholder.classList.add("placeholder-hide");
+    }
+  });
+});
 
 //НАСТОЙКА ИНПУТОВ ДАТА И ВРЕМЯ С ПОМОЩЬЮ FTALPICKR
 document.addEventListener("DOMContentLoaded", function () {
@@ -114,7 +143,15 @@ document.addEventListener("DOMContentLoaded", function () {
   flatpickr(".reservation__form-date", {
     dateFormat: "Y-m-d",
     minDate: "today",
+    defaultDate: null,
   });
+
+  // Очистка значений инпутов по умолчанию при загрузке страницы (если нужно)
+  const dateInput = document.querySelector(".reservation__form-date");
+  const timeInput = document.querySelector(".reservation__form-input-time");
+
+  dateInput.value = ""; // Очищаем значение даты
+  timeInput.value = ""; // Очищаем значение времени
 
   // Получаем форму по её ID
   const reservationForm = document.getElementById("reservationForm");

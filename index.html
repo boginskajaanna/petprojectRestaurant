@@ -795,20 +795,25 @@
                   required
                 />
                 <label class="reservation__form-label visually-hidden" for="timeImterval">Time</label>
-                <input
-                  class="reservation__form-input reservation__form-input-time"
-                  type="time"
-                  id="timeImterval"
-                  required
-                />
+                <div class="input-container">
+                  <input
+                    class="reservation__form-input reservation__form-input-time reservation__form-input-flatpickr"
+                    type="text"
+                    id="timeImterval"
+                    required
+                  />
+                  <span class="flatpickr-placeholder ">Select time</span>
+                </div>
                 <label class="reservation__form-label visually-hidden" for="guest-date">Date</label>
-                <input
-                  class="reservation__form-input reservation__form-date"
-                  type="date"
-                  name="guest-date"
-                  id="guest-date"
-                  required
-                />
+                <div class="input-container">
+                  <input
+                    class="reservation__form-input reservation__form-date reservation__form-input-flatpickr"
+                    type="text"
+                    id="guest-date"
+                    required
+                  />
+                  <span class="flatpickr-placeholder">Select date</span>
+                </div>
               </div>
               <div class="reservation__form-submit">
                 <button class="reservation__form-btn button" type="submit">Book a table</button>
