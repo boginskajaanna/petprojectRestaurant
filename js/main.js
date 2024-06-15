@@ -37,6 +37,8 @@ function updateVisibleItems() {
 function showAllItems() {
   const hiddenItems = document.querySelectorAll(".popular__dish-item.hidden");
 
+  console.log("Button clicked, showing all items");
+
   // Показываем все скрытые элементы
   hiddenItems.forEach((item) => {
     item.classList.remove("hidden");
@@ -64,6 +66,9 @@ window.addEventListener("resize", updateVisibleItems);
 
 // Обработчик для кнопки "See all dishes"
 document.querySelector("#seeAllDishes").addEventListener("click", showAllItems);
+
+
+
 
 //SWIPER
 const swiper = new Swiper(".swiper", {
@@ -173,6 +178,27 @@ document.addEventListener("DOMContentLoaded", function () {
       sendData();
     }
   });
+
+
+  
+//ПРЕДОТВРАЩЕНИЕ СМЕЩЕНИЯ ПЛЕЙСХОЛДЕРОВ при скроле на моб устройстве
+ document.addEventListener("DOMContentLoaded", function () {
+   // Находим все инпуты на странице, которые нас интересуют
+   var inputs = document.querySelectorAll(".reservation__form-input");
+
+   // Добавляем обработчик события touchstart для каждого инпута
+   inputs.forEach(function (input) {
+     input.addEventListener("touchstart", function (event) {
+       // Предотвращаем дефолтное поведение (фокусировку на инпуте)
+       event.preventDefault();
+
+       // Вызываем метод focus на инпуте, чтобы активировать его
+       input.focus();
+     });
+   });
+ });
+  
+  
 
   // Функция для отправки данных формы на сервер
   function sendData() {

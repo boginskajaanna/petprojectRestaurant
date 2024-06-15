@@ -18,18 +18,12 @@
       align-items: center;
       gap: 4px;
     }
-    &:hover {
-      .mobile-menu__line {
-        background-color: $color-decor-light; // Изменение цвета лайна при ховере на кнопку
-      }
-    }
   }
 
   &__line {
     width: 40px;
     height: 2px;
     background-color: $color-primery-light;
-    transition: all ease 0.3s;
   }
 
   &__categories-item {

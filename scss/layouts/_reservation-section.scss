@@ -43,6 +43,7 @@
   &__form {
     display: flex;
     flex-direction: column;
+    gap: 20px;
   }
 
   &__form-title {
@@ -64,21 +65,7 @@
     }
   }
 
-  &__form-top {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-    gap: 26px;
-  }
 
-  &__form-bottom {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 23px;
-    margin-bottom: 30px;
-  }
 
   &__form-input {
     position: relative;
