@@ -6,6 +6,9 @@ mobileMenuBtn.addEventListener("click", function () {
   mobileMenu.classList.toggle("mobile-menu--hidden");
 });
 
+//ПОДРУЗКА ЭЛЕМЕНТОВ ПОПУЛАР ДИШЕЗ ПО КЛИКУ НА КНОПКУ
+let allItemsVisible = false;
+
 // Функция для обновления видимых элементов в зависимости от текущего размера экрана
 function updateVisibleItems() {
   const dishList = document.querySelector(".popular__dish-list");
@@ -15,21 +18,23 @@ function updateVisibleItems() {
   // Определяем количество элементов, которые должны быть видимыми по умолчанию
   const defaultVisibleItems = columns;
 
-  // Скрываем все элементы и показываем только необходимое количество
-  dishItems.forEach((item, index) => {
-    if (index < defaultVisibleItems) {
-      item.classList.remove("hidden");
-    } else {
-      item.classList.add("hidden");
-    }
-  });
+  if (!allItemsVisible) {
+    // Скрываем все элементы и показываем только необходимое количество
+    dishItems.forEach((item, index) => {
+      if (index < defaultVisibleItems) {
+        item.classList.remove("hidden");
+      } else {
+        item.classList.add("hidden");
+      }
+    });
 
-  // Показываем кнопку "See all dishes", если есть скрытые элементы
-  const button = document.querySelector("#seeAllDishes");
-  if (dishItems.length > defaultVisibleItems) {
-    button.style.display = "block";
-  } else {
-    button.style.display = "none";
+    // Показываем кнопку "See all dishes", если есть скрытые элементы
+    const button = document.querySelector("#seeAllDishes");
+    if (dishItems.length > defaultVisibleItems) {
+      button.style.display = "block";
+    } else {
+      button.style.display = "none";
+    }
   }
 }
 
@@ -46,6 +51,9 @@ function showAllItems() {
 
   // Скрываем кнопку "See all dishes"
   document.querySelector("#seeAllDishes").style.display = "none";
+
+  // Устанавливаем флаг, что все элементы видны
+  allItemsVisible = true;
 }
 
 // Функция для определения количества колонок в текущем макете
@@ -102,11 +110,9 @@ const swiper = new Swiper(".swiper", {
 // document.getElementById("guest-date").setAttribute("placeholder", "Select date");
 
 document.addEventListener("DOMContentLoaded", function () {
+  // Обработка для timeInput
   const timeInput = document.getElementById("timeImterval");
-  const timePlaceholder = document.querySelector("#timeImterval + .flatpickr-placeholder");
-
-  const dateInput = document.getElementById("guest-date");
-  const datePlaceholder = document.querySelector("#guest-date + .flatpickr-placeholder");
+  const timePlaceholder = document.querySelector("#timeImterval + .placeholder");
 
   timeInput.addEventListener("focus", function () {
     timePlaceholder.classList.add("placeholder-hide");
@@ -120,6 +126,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Обработка для dateInput
+  const dateInput = document.getElementById("guest-date");
+  const datePlaceholder = document.querySelector("#guest-date + .placeholder");
+
   dateInput.addEventListener("focus", function () {
     datePlaceholder.classList.add("placeholder-hide");
   });
@@ -131,7 +141,36 @@ document.addEventListener("DOMContentLoaded", function () {
       datePlaceholder.classList.add("placeholder-hide");
     }
   });
+
+  // Обработка для остальных инпутов
+  const otherInputs = document.querySelectorAll(
+    ".reservation__form-input:not(.reservation__form-input-time):not(.reservation__form-date)"
+  );
+
+  otherInputs.forEach((input) => {
+    const placeholder = input.nextElementSibling;
+
+    input.addEventListener("focus", function () {
+      placeholder.classList.add("placeholder-hide");
+    });
+
+    input.addEventListener("input", function () {
+      if (!this.value) {
+        placeholder.classList.remove("placeholder-hide");
+      } else {
+        placeholder.classList.add("placeholder-hide");
+      }
+    });
+
+    input.addEventListener("blur", function () {
+      if (!this.value) {
+        placeholder.classList.remove("placeholder-hide");
+      }
+    });
+  });
 });
+
+
 
 //НАСТОЙКА ИНПУТОВ ДАТА И ВРЕМЯ С ПОМОЩЬЮ FTALPICKR
 document.addEventListener("DOMContentLoaded", function () {
@@ -181,22 +220,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   
-//ПРЕДОТВРАЩЕНИЕ СМЕЩЕНИЯ ПЛЕЙСХОЛДЕРОВ при скроле на моб устройстве
- document.addEventListener("DOMContentLoaded", function () {
-   // Находим все инпуты на странице, которые нас интересуют
-   var inputs = document.querySelectorAll(".reservation__form-input");
 
-   // Добавляем обработчик события touchstart для каждого инпута
-   inputs.forEach(function (input) {
-     input.addEventListener("touchstart", function (event) {
-       // Предотвращаем дефолтное поведение (фокусировку на инпуте)
-       event.preventDefault();
-
-       // Вызываем метод focus на инпуте, чтобы активировать его
-       input.focus();
-     });
-   });
- });
   
   
 

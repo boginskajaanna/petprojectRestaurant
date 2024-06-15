@@ -763,58 +763,64 @@
             <h3 class="reservation__title">reservation</h3>
             <h4 class="reservation__form-title">Book Your Table</h4>
             <form class="reservation__form" id="reservationForm">
-             
-                <label class="reservation__form-label visually-hidden" for="guest-name">Name</label>
+              <label class="reservation__form-label visually-hidden" for="guest-name">Name</label>
+              <div class="input-container">
                 <input
                   class="reservation__form-input reservation__form-input-name"
                   type="text"
                   name="guest-name"
                   id="guest-name"
-                  placeholder="Name"
                   required
                 />
-                <label class="reservation__form-label visually-hidden" for="guest-email">Email</label>
+                <span class="placeholder">Name</span>
+              </div>
+
+              <label class="reservation__form-label visually-hidden" for="guest-email">Email</label>
+              <div class="input-container">
                 <input
                   class="reservation__form-input reservation__form-input-email"
                   type="email"
                   name="guest-email"
                   id="guest-email"
-                  placeholder="Email"
                   required
                 />
-             
-              
-                <label class="reservation__form-label visually-hidden" for="guest-quantity">Persons</label>
+                <span class="placeholder">Email</span>
+              </div>
+
+              <label class="reservation__form-label visually-hidden" for="guest-quantity">Persons</label>
+              <div class="input-container">
                 <input
                   class="reservation__form-input reservation__form-input-persons"
                   type="number"
                   name="guest-quantity"
                   id="guest-quantity"
-                  placeholder="Persons"
                   min="1"
                   required
                 />
-                <label class="reservation__form-label visually-hidden" for="timeImterval">Time</label>
-                <div class="input-container">
-                  <input
-                    class="reservation__form-input reservation__form-input-time reservation__form-input-flatpickr"
-                    type="text"
-                    id="timeImterval"
-                    required
-                  />
-                  <span class="flatpickr-placeholder ">Select time</span>
-                </div>
-                <label class="reservation__form-label visually-hidden" for="guest-date">Date</label>
-                <div class="input-container">
-                  <input
-                    class="reservation__form-input reservation__form-date reservation__form-input-flatpickr"
-                    type="text"
-                    id="guest-date"
-                    required
-                  />
-                  <span class="flatpickr-placeholder">Select date</span>
-                </div>
-            
+                <span class="placeholder">Persons</span>
+              </div>
+
+              <label class="reservation__form-label visually-hidden" for="timeImterval">Time</label>
+              <div class="input-container">
+                <input
+                  class="reservation__form-input reservation__form-input-time reservation__form-input-flatpickr"
+                  type="text"
+                  id="timeImterval"
+                  required
+                />
+                <span class="placeholder">Select time</span>
+              </div>
+              <label class="reservation__form-label visually-hidden" for="guest-date">Date</label>
+              <div class="input-container">
+                <input
+                  class="reservation__form-input reservation__form-date reservation__form-input-flatpickr"
+                  type="text"
+                  id="guest-date"
+                  required
+                />
+                <span class="placeholder">Select date</span>
+              </div>
+
               <div class="reservation__form-submit">
                 <button class="reservation__form-btn button" type="submit">Book a table</button>
               </div>
