@@ -1,7 +1,11 @@
 .menu-social {
   &__items {
     display: flex;
+    align-items: center;
     gap: 20px;
+    @media (max-width: 768px) {
+      gap: 10px;
+    }
   }
 
   &__icon {
@@ -9,6 +13,10 @@
     transition: fill 0.3s;
     &:hover {
       fill: $color-decor-light;
+    }
+    @media (max-width: 768px) {
+      width: 22px;
+      height: 22px;
     }
   }
 }

@@ -500,54 +500,8 @@
             </p>
           </div>
           <ul class="popular__dish-list">
-            <li class="popular__dish-item">
-              <img
-                class="popular__dish-img"
-                src="./images/content/popular-dishes/manjoori.jpg"
-                alt="chicken manjoori"
-              />
-              <div class="popular__dish-info">
-                <h5 class="popular__dish-name title">Chicken Manjoori</h5>
-                <p class="popular__dish-price">$15</p>
-              </div>
-              <p class="popular__dish-descr">Dish relished by all age groups as a starter dish at parties.</p>
-            </li>
-            <li class="popular__dish-item">
-              <img class="popular__dish-img" src="./images/content/popular-dishes/hotdog.jpg" alt="hotdog" />
-              <div class="popular__dish-info">
-                <h5 class="popular__dish-name title">Hotdog</h5>
-                <p class="popular__dish-price">$10</p>
-              </div>
-              <p class="popular__dish-descr">Grilled sausage served in the slit of a partially sliced bun.</p>
-            </li>
-            <li class="popular__dish-item">
-              <img
-                class="popular__dish-img"
-                src="./images/content/popular-dishes/salmon.jpg"
-                alt="fresh salmon"
-              />
-              <div class="popular__dish-info">
-                <h5 class="popular__dish-name title">Fresh Salmon</h5>
-                <p class="popular__dish-price">$5</p>
-              </div>
-              <p class="popular__dish-descr">
-                Beat the health blues with our Super Immune Blue Juice Recipe.
-              </p>
-            </li>
-            <li class="popular__dish-item">
-              <img
-                class="popular__dish-img"
-                src="./images/content/popular-dishes/veg-burger.jpg"
-                alt="vegan burger"
-              />
-              <div class="popular__dish-info">
-                <h5 class="popular__dish-name title">Veg Burger</h5>
-                <p class="popular__dish-price">$10</p>
-              </div>
-              <p class="popular__dish-descr">Burgers may be made from ingredients like beans.</p>
-            </li>
 
-            <li class="popular__dish-item hidden">
+            <li class="popular__dish-item">
               <img
                 class="popular__dish-img"
                 src="./images/content/popular-dishes/pasta.jpg"
@@ -560,7 +514,7 @@
               <p class="popular__dish-descr">Traditional pasta with a rich and savory tomato sauce.</p>
             </li>
 
-            <li class="popular__dish-item hidden">
+            <li class="popular__dish-item">
               <img
                 class="popular__dish-img"
                 src="./images/content/popular-dishes/paella.jpg"
@@ -573,7 +527,7 @@
               <p class="popular__dish-descr">A classic Spanish dish made with rice, saffron, and seafood.</p>
             </li>
 
-            <li class="popular__dish-item hidden">
+            <li class="popular__dish-item">
               <img
                 class="popular__dish-img"
                 src="./images/content/popular-dishes/ratatouille.jpg"
@@ -588,7 +542,7 @@
               </p>
             </li>
 
-            <li class="popular__dish-item hidden">
+            <li class="popular__dish-item">
               <img
                 class="popular__dish-img"
                 src="./images/content/popular-dishes/schnitzel.jpg"
@@ -640,6 +594,53 @@
               <p class="popular__dish-descr">
                 A buttery, flaky, and crescent-shaped French pastry, perfect for breakfast or a snack.
               </p>
+            </li>
+
+            <li class="popular__dish-item hidden">
+              <img
+                class="popular__dish-img"
+                src="./images/content/popular-dishes/manjoori.jpg"
+                alt="chicken manjoori"
+              />
+              <div class="popular__dish-info">
+                <h5 class="popular__dish-name title">Manjoori</h5>
+                <p class="popular__dish-price">$15</p>
+              </div>
+              <p class="popular__dish-descr">Dish relished by all age groups as a starter dish at parties.</p>
+            </li>
+            <li class="popular__dish-item hidden">
+              <img class="popular__dish-img" src="./images/content/popular-dishes/hotdog.jpg" alt="hotdog" />
+              <div class="popular__dish-info">
+                <h5 class="popular__dish-name title">Hotdog</h5>
+                <p class="popular__dish-price">$10</p>
+              </div>
+              <p class="popular__dish-descr">Grilled sausage served in the slit of a partially sliced bun.</p>
+            </li>
+            <li class="popular__dish-item hidden">
+              <img
+                class="popular__dish-img"
+                src="./images/content/popular-dishes/salmon.jpg"
+                alt="fresh salmon"
+              />
+              <div class="popular__dish-info">
+                <h5 class="popular__dish-name title">Fresh Salmon</h5>
+                <p class="popular__dish-price">$5</p>
+              </div>
+              <p class="popular__dish-descr">
+                Beat the health blues with our Super Immune Blue Juice Recipe.
+              </p>
+            </li>
+            <li class="popular__dish-item hidden">
+              <img
+                class="popular__dish-img"
+                src="./images/content/popular-dishes/veg-burger.jpg"
+                alt="vegan burger"
+              />
+              <div class="popular__dish-info">
+                <h5 class="popular__dish-name title">Veg Burger</h5>
+                <p class="popular__dish-price">$10</p>
+              </div>
+              <p class="popular__dish-descr">Burgers may be made from ingredients like beans.</p>
             </li>
 
             <li class="popular__dish-item hidden">
@@ -772,7 +773,7 @@
                   id="guest-name"
                   required
                 />
-                <span class="placeholder">Name</span>
+                <span class="placeholder">Name*</span>
               </div>
 
               <label class="reservation__form-label visually-hidden" for="guest-email">Email</label>
@@ -784,7 +785,7 @@
                   id="guest-email"
                   required
                 />
-                <span class="placeholder">Email</span>
+                <span class="placeholder">Email*</span>
               </div>
 
               <label class="reservation__form-label visually-hidden" for="guest-quantity">Persons</label>
@@ -795,30 +796,31 @@
                   name="guest-quantity"
                   id="guest-quantity"
                   min="1"
+                  max="50"
                   required
                 />
-                <span class="placeholder">Persons</span>
+                <span class="placeholder">Persons*</span>
               </div>
 
               <label class="reservation__form-label visually-hidden" for="timeImterval">Time</label>
               <div class="input-container">
                 <input
                   class="reservation__form-input reservation__form-input-time reservation__form-input-flatpickr"
-                  type="text"
+                  type="time"
                   id="timeImterval"
                   required
                 />
-                <span class="placeholder">Select time</span>
+                <span class="placeholder">Select time*</span>
               </div>
               <label class="reservation__form-label visually-hidden" for="guest-date">Date</label>
               <div class="input-container">
                 <input
                   class="reservation__form-input reservation__form-date reservation__form-input-flatpickr"
-                  type="text"
+                  type="date"
                   id="guest-date"
                   required
                 />
-                <span class="placeholder">Select date</span>
+                <span class="placeholder">Select date*</span>
               </div>
 
               <div class="reservation__form-submit">

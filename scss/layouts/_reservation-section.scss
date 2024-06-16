@@ -65,8 +65,6 @@
     }
   }
 
-
-
   &__form-input {
     position: relative;
     color: $color-primery-light;
@@ -93,19 +91,6 @@
         line-height: 16px;
       }
     }
-
-  }
-
-  &__form-input-name,
-  &__form-input-email {
-    flex-grow: 1;
-  }
-
-  &__form-input-persons,
-  &__form-input-time,
-  &__form-input-date {
-    // width: 33.3%;
-    flex-grow: 1;
   }
 
   &__form-btn {
@@ -169,14 +154,6 @@
     line-height: 16px;
   }
 }
-
-// .input-container input:focus + .flatpickr-placeholder {
-//   opacity: 0;
-// }
-
-// .input-container input:active + .flatpickr-placeholder {
-//   opacity: 0;
-// }
 
 .placeholder {
   opacity: 1;

@@ -1,24 +1,30 @@
 .footer {
   padding: 50px 0;
+  @media (max-width: 768px) {
+    padding: 30px 0;
+  }
 
   &__inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: $color-primery-light;
-    @media (max-width: 880px) {
+    @media (max-width: 560px) {
       flex-direction: column;
+      gap: 15px;
     }
   }
 
   &__hashtag {
     line-height: 33px;
     transition: color 0.3s;
+    padding-right: 60px;
     &:hover {
       color: $color-decor-light;
     }
-    @media (max-width: 880px) {
-      margin-bottom: 15px;
+    @media (max-width: 768px) {
+      padding-right: 15px;
     }
+    
   }
 }
