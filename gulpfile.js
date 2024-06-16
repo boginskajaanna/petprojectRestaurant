@@ -6,7 +6,6 @@ const uglify = require("gulp-uglify-es").default; //плагин для мини
 const browserSync = require("browser-sync").create(); //плагин для автообновления страницы
 const autoprefixer = require("gulp-autoprefixer"); //плагин для вендорных префиксов // ТОЛЬКО 8 версия, с 9 выдает ошибку
 
-
 //конвертация scss с css и минификация
 function styles() {
   return src("scss/style.scss")
@@ -19,7 +18,16 @@ function styles() {
 
 //минификация js
 function scripts() {
-  return src(["js/main.js"])
+  return src([
+    "js/flatpickr.js",
+    "js/form-submission.js",
+    "js/gsap-animation.js",
+    "js/input-persons.js",
+    "js/mobile-menu.js",
+    "js/placeholders.js",
+    "js/popular-dishes.js",
+    "js/swiper.js",
+  ])
     .pipe(concat("main.min.js")) //переименовали
     .pipe(uglify())
     .pipe(dest("js"))
@@ -34,19 +42,27 @@ function watching() {
     },
   });
   watch(["scss/**/*.scss"], styles); //отслеживаем изменения стилей, если есть запускаем автоматически styles
-  watch(["js/main.js"], scripts); //отслеживаем изменения стилей, если есть запускаем автоматически scripts
+  watch(
+    [
+      "js/flatpickr.js",
+      "js/form-submission.js",
+      "js/gsap-animation.js",
+      "js/input-persons.js",
+      "js/mobile-menu.js",
+      "js/placeholders.js",
+      "js/popular-dishes.js",
+      "js/swiper.js",
+    ],
+    scripts
+  ); //отслеживаем изменения стилей, если есть запускаем автоматически scripts
   // watch(["app/components/*", 'app/pages/*'], pages); //отслеживаем изменения html компонентов, если есть запускаем автоматически pages
   watch(["*.html"]).on("change", browserSync.reload); //отслеживание изменения в html файлах
 }
-
-
 
 exports.styles = styles; // команда gulp styles
 exports.scripts = scripts; // команда gulp scripts
 exports.watching = watching; // команда gulp watching
 
-
 //запуск последовательно всех скриптов по дефолту
 //в терминале просто команда gulp
 exports.default = parallel(styles, scripts, watching);
-
