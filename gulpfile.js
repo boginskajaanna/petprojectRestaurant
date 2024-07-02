@@ -64,5 +64,5 @@ exports.scripts = scripts; // команда gulp scripts
 exports.watching = watching; // команда gulp watching
 
 //запуск последовательно всех скриптов по дефолту
-//в терминале просто команда gulp
+//в терминале команда gulp
 exports.default = parallel(styles, scripts, watching);
